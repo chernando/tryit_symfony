@@ -1,0 +1,7 @@
+parameters:
+#    try_it_blog.example.class: TryIt\BlogBundle\Example
+
+services:
+#    try_it_blog.example:
+#        class: %try_it_blog.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

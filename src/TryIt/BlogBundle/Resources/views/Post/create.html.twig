@@ -1,0 +1,12 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+
+<form action="{{ path('try_it_blog_post_create') }}" method="post">
+
+    {{ form_widget(form) }}
+
+    <input type="submit" />
+</form>
+
+{% endblock %}

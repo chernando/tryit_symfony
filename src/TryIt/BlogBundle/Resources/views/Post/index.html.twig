@@ -1,0 +1,15 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+
+{% for post in posts %}
+  <div>
+    <h2><a href="{{ path('try_it_blog_post_detail', {'post_id': post.id}) }}">{{ post.title }}</a></h2>
+    <p>
+    {{ post.content }}
+    </p>
+    <p>{{ post.comments.count }} comments</p>
+  </div>
+{% endfor %}
+
+{% endblock %}

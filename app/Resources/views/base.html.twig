@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Try It - microBlog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap-responsive.min.css') }}" rel="stylesheet">
+  </head>
+
+  <body class="preview" id="top" data-spy="scroll" data-target=".subnav" data-offset="80">
+  <!-- Navbar
+    ================================================== -->
+ <div class="navbar navbar-fixed-top">
+   <div class="navbar-inner">
+     <div class="container">
+       <a class="brand" href="{{ path('try_it_blog_homepage') }}">Try It</a>
+        <ul class="nav" id="main-menu-left">
+          <li><a href="{{ path('try_it_blog_homepage') }}">microBlog</a></li>
+          <li><a href="{{ path('try_it_blog_post_create') }}">Publish</a></li>
+        </ul>
+        <p class="pull-right">
+        {{ app.request.httpHost }}
+        </p>
+     </div>
+   </div>
+ </div>
+
+    <div class="container">
+
+  {% block content %}{% endblock %}
+
+
+<hr>
+      <footer id="footer">
+        Theme made by <a href="http://thomaspark.me">Thomas Park</a>. Contact him <a href="mailto:hello@thomaspark.me">hello@thomaspark.me</a>.<br/>
+        Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License v2.0</a>.<br/>
+        Based on <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>. Hosted on <a href="http://pages.github.com/">GitHub</a>. Icons from <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>. Web fonts from <a href="http://www.google.com/webfonts">Google</a>. Favicon by <a href="https://twitter.com/geraldhiller">Gerald Hiller</a>.</p>
+      </footer>
+
+    </div><!-- /container -->
+
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+  </body>
+</html>
+</body>
+</html>

@@ -1,0 +1,15 @@
+try_it_blog_homepage:
+    pattern:  /
+    defaults: { _controller: TryItBlogBundle:Post:index }
+
+try_it_blog_post_create:
+    pattern:  publish/
+    defaults: { _controller: TryItBlogBundle:Post:create }
+
+try_it_blog_post_detail:
+    pattern:  post/{post_id}/
+    defaults: { _controller: TryItBlogBundle:Post:detail }
+
+try_it_blog_comment_create:
+    pattern:  post/{post_id}/comment/
+    defaults: { _controller: TryItBlogBundle:Comment:create }

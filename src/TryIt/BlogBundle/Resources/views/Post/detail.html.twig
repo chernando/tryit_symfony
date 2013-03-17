@@ -1,0 +1,29 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+
+  <div>
+    <h2>{{ post.title }}</h2>
+    <p>
+    {{ post.content }}
+    </p>
+  </div>
+
+  <h4>Comments</h4>
+    {% for comment in post.comments %}
+    <p>
+      {{ comment.content }}
+    </p>
+
+    {% endfor %}
+  <div>
+  </div>
+
+  <h4>Your thougths</h4>
+
+  <form action="{{ path('try_it_blog_comment_create', {'post_id': post.id}) }}" method="post" accept-charset="utf-8">
+    {{ form_widget(form) }}
+    <input type="submit" name="submit" id="submit" value="Submit" />
+  </form>
+
+{% endblock %}
